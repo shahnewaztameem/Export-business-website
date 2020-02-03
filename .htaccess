@@ -1,0 +1,21 @@
+RewriteEngine on
+
+RewriteRule ^(index|company-profile|products|product|product_details|contact|enquiry|quality-control)$ $1.php [NC,L]
+
+
+RewriteRule ^product/(\d+)$ product.php?product_id=$1 [NC,L]
+RewriteRule ^product_details/(\d+)$ product_details.php?product_id=$1 [NC,L]
+RewriteRule ^product/([0-9]+)/([a-zA-Z0-9-]+) product.php?product_id=$1&url=$2
+
+#RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+#RewriteRule .* - [L,R=404]
+
+
+
+
+
+
+
+
+
+
